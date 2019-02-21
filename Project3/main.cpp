@@ -1,15 +1,22 @@
 //
 //  main.cpp
-//  Project3
+//  Project 1
 //
-//  Created by Cam on 2/21/19.
-//  Copyright © 2019 Cam. All rights reserved.
+//  Created by Cam on 1/22/2019.
+//  Copyright © 2019 Cameron Brown. All rights reserved.
 //
 
+#include <string>
 #include <iostream>
+#include <fstream>
+#include "Parser.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main(int argc, char* argv[]){
+    string fileName = argv[1];
+    Parser myParser(fileName);
+    myParser.parse();
+    
     return 0;
 }
