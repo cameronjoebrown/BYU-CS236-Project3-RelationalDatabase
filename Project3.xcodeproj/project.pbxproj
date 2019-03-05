@@ -15,6 +15,11 @@
 		5216A85C221F6DF600CD0B7A /* Scanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5216A855221F6DF600CD0B7A /* Scanner.cpp */; };
 		5216A85D221F6DF600CD0B7A /* DatalogProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5216A856221F6DF600CD0B7A /* DatalogProgram.cpp */; };
 		5216A85E221F6DF600CD0B7A /* Token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5216A857221F6DF600CD0B7A /* Token.cpp */; };
+		52915322222F3C8B005443E0 /* Tuple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52915320222F3C8B005443E0 /* Tuple.cpp */; };
+		52915325222F3CE0005443E0 /* Scheme.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52915323222F3CE0005443E0 /* Scheme.cpp */; };
+		52915329222F3D89005443E0 /* Relation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52915327222F3D89005443E0 /* Relation.cpp */; };
+		5291532C222F3DCF005443E0 /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5291532A222F3DCF005443E0 /* Database.cpp */; };
+		5291532F222F3DF7005443E0 /* Interpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5291532D222F3DF7005443E0 /* Interpreter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +52,16 @@
 		5216A856221F6DF600CD0B7A /* DatalogProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DatalogProgram.cpp; sourceTree = "<group>"; };
 		5216A857221F6DF600CD0B7A /* Token.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Token.cpp; sourceTree = "<group>"; };
 		5216A85F221F6F5000CD0B7A /* test */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test; sourceTree = "<group>"; };
+		52915320222F3C8B005443E0 /* Tuple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tuple.cpp; sourceTree = "<group>"; };
+		52915321222F3C8B005443E0 /* Tuple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tuple.h; sourceTree = "<group>"; };
+		52915323222F3CE0005443E0 /* Scheme.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scheme.cpp; sourceTree = "<group>"; };
+		52915326222F3D49005443E0 /* Scheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scheme.h; sourceTree = "<group>"; };
+		52915327222F3D89005443E0 /* Relation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Relation.cpp; sourceTree = "<group>"; };
+		52915328222F3D89005443E0 /* Relation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relation.h; sourceTree = "<group>"; };
+		5291532A222F3DCF005443E0 /* Database.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Database.cpp; sourceTree = "<group>"; };
+		5291532B222F3DCF005443E0 /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		5291532D222F3DF7005443E0 /* Interpreter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Interpreter.cpp; sourceTree = "<group>"; };
+		5291532E222F3DF7005443E0 /* Interpreter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interpreter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,8 @@
 				5216A856221F6DF600CD0B7A /* DatalogProgram.cpp */,
 				5216A84F221F6DF600CD0B7A /* DatalogProgram.h */,
 				5216A84B221F6DF500CD0B7A /* Parameter.cpp */,
+				52915323222F3CE0005443E0 /* Scheme.cpp */,
+				52915326222F3D49005443E0 /* Scheme.h */,
 				5216A853221F6DF600CD0B7A /* Parameter.h */,
 				5216A850221F6DF600CD0B7A /* Parser.cpp */,
 				5216A84D221F6DF600CD0B7A /* Parser.h */,
@@ -95,6 +112,14 @@
 				5216A857221F6DF600CD0B7A /* Token.cpp */,
 				5216A84E221F6DF600CD0B7A /* Token.h */,
 				5216A843221F6D4300CD0B7A /* main.cpp */,
+				52915320222F3C8B005443E0 /* Tuple.cpp */,
+				52915321222F3C8B005443E0 /* Tuple.h */,
+				52915327222F3D89005443E0 /* Relation.cpp */,
+				52915328222F3D89005443E0 /* Relation.h */,
+				5291532A222F3DCF005443E0 /* Database.cpp */,
+				5291532B222F3DCF005443E0 /* Database.h */,
+				5291532D222F3DF7005443E0 /* Interpreter.cpp */,
+				5291532E222F3DF7005443E0 /* Interpreter.h */,
 			);
 			path = Project3;
 			sourceTree = "<group>";
@@ -155,13 +180,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52915325222F3CE0005443E0 /* Scheme.cpp in Sources */,
+				5291532F222F3DF7005443E0 /* Interpreter.cpp in Sources */,
 				5216A85C221F6DF600CD0B7A /* Scanner.cpp in Sources */,
 				5216A85A221F6DF600CD0B7A /* Parser.cpp in Sources */,
 				5216A844221F6D4300CD0B7A /* main.cpp in Sources */,
 				5216A85E221F6DF600CD0B7A /* Token.cpp in Sources */,
+				52915329222F3D89005443E0 /* Relation.cpp in Sources */,
 				5216A859221F6DF600CD0B7A /* Predicate.cpp in Sources */,
 				5216A85D221F6DF600CD0B7A /* DatalogProgram.cpp in Sources */,
+				52915322222F3C8B005443E0 /* Tuple.cpp in Sources */,
 				5216A858221F6DF600CD0B7A /* Parameter.cpp in Sources */,
+				5291532C222F3DCF005443E0 /* Database.cpp in Sources */,
 				5216A85B221F6DF600CD0B7A /* Rule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
