@@ -11,4 +11,10 @@
 
 #include <stdio.h>
 
+using namespace std;
+
+class Relation {
+    
+};
+
 #endif /* Relation_h */

@@ -11,4 +11,10 @@
 
 #include <stdio.h>
 
+using namespace std;
+
+class Interpreter {
+    
+};
+
 #endif /* Interpreter_h */

@@ -9,5 +9,15 @@
 #ifndef Scheme_h
 #define Scheme_h
 
+#include <vector>
+#include <string>
+#include "Tuple.h"
+
+using namespace std;
+
+class Scheme : public vector<string> {
+    Scheme();
+    ~Scheme();
+};
 
 #endif /* Scheme_h */

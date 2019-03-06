@@ -11,4 +11,10 @@
 
 #include <stdio.h>
 
+using namespace std;
+
+class Database {
+    
+};
+
 #endif /* Database_h */
