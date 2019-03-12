@@ -13,7 +13,12 @@ Interpreter :: Interpreter() {
 }
 
 Interpreter :: Interpreter(DatalogProgram data) {
-    
+    datalog = data;
+    schemeVector = data.getSchemes();
+    factVector = data.getFacts();
+    ruleVector =  data.getRules();
+    queryVector = data.getQueries();
+//    Database(schemeVector, factVector);
 }
 
 Interpreter :: ~Interpreter() {

@@ -22,8 +22,11 @@ public:
     ~Interpreter();
     
 private:
-    
-    
+    DatalogProgram datalog;
+    vector<Predicate> schemeVector;
+    vector<Predicate> factVector;
+    vector<Rule> ruleVector;
+    vector<Predicate> queryVector;
     
 };
 

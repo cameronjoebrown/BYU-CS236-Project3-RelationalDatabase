@@ -12,6 +12,11 @@ Relation :: Relation() {
     
 }
 
+Relation :: Relation(string n, Scheme s) {
+    name = n;
+    scheme = s;
+}
+
 Relation :: ~Relation() {
     
 }
@@ -19,6 +24,10 @@ Relation :: ~Relation() {
 string Relation :: toString() {
     //for_each(tupleSet.begin(), tupleSet.end(), ); FIX!!!
     return "";
+}
+
+void Relation :: addTuple(Tuple t) {
+    tupleSet.insert(t);
 }
 
 string Relation :: getName() {

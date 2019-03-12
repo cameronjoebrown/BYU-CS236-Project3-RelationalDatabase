@@ -21,9 +21,13 @@ using namespace std;
 class Relation {
 public:
     Relation();
+    Relation(string n, Scheme s);
     ~Relation();
+    
     string toString();
+    
     void addTuple(Tuple t);
+    
     string getName();
     Scheme getScheme();
     set<Tuple> getSet();
