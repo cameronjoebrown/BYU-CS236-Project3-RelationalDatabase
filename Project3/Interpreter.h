@@ -10,10 +10,20 @@
 #define Interpreter_h
 
 #include <stdio.h>
+#include "DatalogProgram.h"
+#include "Database.h"
 
 using namespace std;
 
 class Interpreter {
+public:
+    Interpreter();
+    Interpreter(DatalogProgram data);
+    ~Interpreter();
+    
+private:
+    
+    
     
 };
 

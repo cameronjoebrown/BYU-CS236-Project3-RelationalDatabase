@@ -16,8 +16,14 @@
 using namespace std;
 
 class Scheme : public vector<string> {
+public:
+    
     Scheme();
     ~Scheme();
+    
+private:
+    
+    
 };
 
 #endif /* Scheme_h */

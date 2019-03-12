@@ -15,15 +15,15 @@
 #include <iostream>
 #include <string>
 #include "Token.h"
-#include "Scanner.h"
 #include "DatalogProgram.h"
 
 using namespace std;
 
 class Parser {
 public:
-    Parser(string fileName);
+    Parser(vector<Token> vector);
     ~Parser();
+    
     void parse();
     void match(TokenType t);
     void scheme();
@@ -43,6 +43,7 @@ public:
     void parameterList();
     string expression();
     string operate();
+    
     vector<Token> getTokenVector();
     DatalogProgram getData();
     Predicate getPredicate();;

@@ -22,17 +22,21 @@ class DatalogProgram {
 public:
     DatalogProgram();
     ~DatalogProgram();
+    
     string toString();
+    
     vector<Predicate> getSchemes();
     vector<Predicate> getFacts();
     vector<Rule> getRules();
     vector<Predicate> getQueries();
     set<string> getDomain();
+    
     void addScheme(Predicate s);
     void addFact(Predicate f);
     void addRule(Rule r);
     void addQuery(Predicate q);
     void addDomain(vector<Parameter> pList);
+    
     string stringSchemes();
     string stringFacts();
     string stringRules();

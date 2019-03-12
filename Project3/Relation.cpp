@@ -7,3 +7,28 @@
 //
 
 #include "Relation.h"
+
+Relation :: Relation() {
+    
+}
+
+Relation :: ~Relation() {
+    
+}
+
+string Relation :: toString() {
+    //for_each(tupleSet.begin(), tupleSet.end(), ); FIX!!!
+    return "";
+}
+
+string Relation :: getName() {
+    return name;
+}
+
+Scheme Relation :: getScheme() {
+    return scheme;
+}
+
+set<Tuple> Relation :: getSet() {
+    return tupleSet;
+}

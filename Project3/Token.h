@@ -30,12 +30,10 @@ public:
     void printToken();
     TokenType getTokenType();
     string getValue();
-    //vector<Token> getVector();
 private:
     TokenType type;
     string value;
     int lineNum;
-    //vector<Token> tokenVector;
 };
 
 #endif /* Token.h */

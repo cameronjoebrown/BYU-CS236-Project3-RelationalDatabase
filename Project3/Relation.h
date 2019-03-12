@@ -10,11 +10,27 @@
 #define Relation_h
 
 #include <stdio.h>
+#include <string>
+#include <set>
+#include "Tuple.h"
+#include "Scheme.h"
+
 
 using namespace std;
 
 class Relation {
-    
+public:
+    Relation();
+    ~Relation();
+    string toString();
+    void addTuple(Tuple t);
+    string getName();
+    Scheme getScheme();
+    set<Tuple> getSet();
+private:
+    string name; // Name of Scheme
+    Scheme scheme; // Scheme is one vector of attributes
+    set<Tuple> tupleSet; // These are Facts
 };
 
 #endif /* Relation_h */

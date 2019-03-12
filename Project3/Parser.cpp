@@ -13,10 +13,8 @@
 
 using namespace std;
 
-Parser :: Parser(string fileName) {
-    Scanner myScanner(fileName);
-    myScanner.scan();
-    tokenVector = myScanner.getVector();
+Parser :: Parser(vector<Token> vector) {
+    tokenVector = vector;
     current = tokenVector.at(0);
 }
 

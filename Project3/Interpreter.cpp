@@ -7,3 +7,15 @@
 //
 
 #include "Interpreter.h"
+
+Interpreter :: Interpreter() {
+
+}
+
+Interpreter :: Interpreter(DatalogProgram data) {
+    
+}
+
+Interpreter :: ~Interpreter() {
+    
+}
