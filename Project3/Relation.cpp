@@ -22,7 +22,9 @@ Relation :: ~Relation() {
 }
 
 string Relation :: toString() {
-    //for_each(tupleSet.begin(), tupleSet.end(), ); FIX!!!
+    for(Tuple x : tupleSet) {
+        
+    }
     return "";
 }
 

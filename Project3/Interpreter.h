@@ -10,6 +10,8 @@
 #define Interpreter_h
 
 #include <stdio.h>
+#include <string>
+#include <vector>
 #include "DatalogProgram.h"
 #include "Database.h"
 
@@ -26,7 +28,8 @@ private:
     vector<Predicate> schemeVector;
     vector<Predicate> factVector;
     vector<Rule> ruleVector;
-    vector<Predicate> queryVector;
+    vector<Predicate> queryVector; 
+    Database database;
     
 };
 

@@ -12,10 +12,11 @@ Database :: Database() {
     
 }
 
-//Database :: Database(vector<Predicate> schemes, vector<Predicate> facts) {
-
-//}
 
 Database :: ~Database() {
+    
+}
+
+void addRelation() {
     
 }
