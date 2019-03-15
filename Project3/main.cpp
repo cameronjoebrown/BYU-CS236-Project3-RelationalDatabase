@@ -25,6 +25,6 @@ int main(int argc, char* argv[]){
     myParser.parse();
     DatalogProgram data = myParser.getData();
     Interpreter myInterpreter(data);
-    
+    myInterpreter.evalAllQueries();
     return 0;
 }

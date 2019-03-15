@@ -24,7 +24,10 @@ public:
     string toString();
     string getType();
     void setValue(string val);
+    bool getIsConstant();
+    void setIsConstant(bool tf);
 private:
+    bool isConstant;
     string value;
     string type;
     

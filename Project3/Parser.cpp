@@ -49,7 +49,7 @@ void Parser :: parse() {
         
         match(END);
         
-        cout << data.toString();
+        //cout << data.toString();
     }
     catch(Token error) {
         cout << "Failure!" << endl << "  ";
@@ -209,10 +209,12 @@ Parameter Parser :: parameter() {
     Parameter newParam;
     if(current.getTokenType() == STRING){
         newParam.setValue(current.getValue());
+        newParam.setIsConstant(true);
         match(STRING);
     }
     else if(current.getTokenType() == ID) {
         newParam.setValue(current.getValue());
+        newParam.setIsConstant(false);
         match(ID);
     }
     else if(current.getTokenType() == LEFT_PAREN) {

@@ -22,7 +22,8 @@ public:
     Interpreter();
     Interpreter(DatalogProgram data);
     ~Interpreter();
-    
+    Relation evalOneQuery(Predicate myQuery);
+    void evalAllQueries();
 private:
     DatalogProgram datalog;
     vector<Predicate> schemeVector;

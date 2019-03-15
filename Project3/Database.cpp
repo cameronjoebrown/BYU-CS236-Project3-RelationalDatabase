@@ -17,6 +17,4 @@ Database :: ~Database() {
     
 }
 
-void addRelation() {
-    
-}
+

@@ -42,3 +42,11 @@ string Parameter::getType(){
 void Parameter :: setValue(string val) {
     value = val;
 }
+
+bool Parameter :: getIsConstant() {
+    return isConstant;
+}
+
+void Parameter :: setIsConstant(bool tf) {
+    isConstant = tf;
+}

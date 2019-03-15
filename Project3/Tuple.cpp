@@ -15,3 +15,11 @@ Tuple :: Tuple() {
 Tuple :: ~Tuple() {
     
 }
+
+string Tuple :: toString() {
+    stringstream ss;
+    for(int i = 0; i < this->size(); ++i) {
+        ss << this->at(i);
+    }
+    return ss.str();
+}

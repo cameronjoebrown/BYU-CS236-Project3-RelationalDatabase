@@ -10,8 +10,11 @@
 #define Relation_h
 
 #include <stdio.h>
+#include <iostream>
+#include <sstream>
 #include <string>
 #include <set>
+#include <map>
 #include "Tuple.h"
 #include "Scheme.h"
 
@@ -31,6 +34,11 @@ public:
     string getName();
     Scheme getScheme();
     set<Tuple> getSet();
+    
+    Relation select(string constant, int index, Relation newRelation);
+    Relation select(int index1, int index2, Relation newRelation);
+    Relation project(vector<int> positions, Relation newRelation);
+    Relation rename(map<string, int> variables, Relation newRelation);
 private:
     string name; // Name of Scheme
     Scheme scheme; // Scheme is one vector of attributes

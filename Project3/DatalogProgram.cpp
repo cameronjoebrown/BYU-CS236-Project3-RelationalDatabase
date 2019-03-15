@@ -85,8 +85,9 @@ void DatalogProgram::addDomain(vector<Parameter> paramList){
 string DatalogProgram::stringSchemes(){
     stringstream ss;
     ss << "Schemes(" << schemes.size() << "):";
-    for(int i = 0; i < (int)schemes.size(); i++)
+    for(int i = 0; i < (int)schemes.size(); i++) {
         ss << "\n  " << schemes[i].toString();
+    }
     return ss.str();
 }
 
@@ -94,18 +95,18 @@ string DatalogProgram::stringDomain(){
     stringstream ss;
     ss << "Domain(" << domain.size() << "):";
     set<string>::iterator myIterator;
-    for(myIterator = domain.begin();
-        myIterator != domain.end();
-        myIterator++)
+    for(myIterator = domain.begin(); myIterator != domain.end(); myIterator++) {
         ss << "\n  " << (*myIterator);
+    }
     return ss.str();
 }
 
 string DatalogProgram::stringFacts(){
     stringstream ss;
     ss << "Facts(" << facts.size() << "):";
-    for(int i = 0; i < (int)facts.size(); i++)
+    for(int i = 0; i < (int)facts.size(); i++) {
         ss << "\n  " << facts[i].toString() << ".";
+    }
     return ss.str();
 }
 
