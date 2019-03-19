@@ -80,8 +80,11 @@ Relation Interpreter :: evalOneQuery(Predicate myQuery) {
 }
 
 void Interpreter :: evalAllQueries() {
-    for(Predicate pred : queryVector) {
-        Relation newRelation = evalOneQuery(pred);
-        cout << pred.toString() << "? " << newRelation.toString();
+    for(int i = 0; i < (int)queryVector.size(); ++i) {
+        Relation newRelation = evalOneQuery(queryVector.at(i));
+        cout << queryVector.at(i).toString() << "? " << newRelation.toString();
+        if(i != (int)queryVector.size()-1) {
+            cout << endl;
+        }
     }
 }

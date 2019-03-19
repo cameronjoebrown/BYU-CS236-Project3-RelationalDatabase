@@ -29,19 +29,20 @@ Relation :: ~Relation() {
 string Relation :: toString() {
     stringstream ss;
     if(tupleSet.empty()) {
-        ss << "No" << endl;
+        ss << "No";
     }
     else {
-        ss << "Yes(" << tupleSet.size() << ")" << endl;
+        ss << "Yes(" << tupleSet.size() << ")";
         for(Tuple x : tupleSet) {
             if(x.empty()) {
                 
             }
             else {
+                ss << endl << "  ";
                 for(int i = 0; i < (int)x.size(); ++i) {
-                    ss << "  " << scheme.at(i) << "=" << x.at(i);
+                    ss << scheme.at(i) << "=" << x.at(i);
                     if(i == (int)x.size()-1) {
-                        ss << endl;
+                        
                     }
                     else {
                         ss << ", ";
@@ -105,7 +106,7 @@ Relation Relation :: project(vector<int> positions, Relation relation) {
 
 Relation Relation :: rename(map<string, int> variables, Relation relation) {
     Relation newRelation(relation.getName(), relation.getSet());
-    for(map<string, int>::iterator it = variables.begin(); it != variables.end(); ++it) {
+    for(map<string, int>::iterator it = variables.begin(); it != variables.end(); it++) {
         newRelation.scheme.push_back(it->first);
     }
     return newRelation;
