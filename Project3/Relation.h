@@ -25,6 +25,7 @@ class Relation {
 public:
     Relation();
     Relation(string n, Scheme s);
+    Relation(string n, set<Tuple> s);
     ~Relation();
     
     string toString();
@@ -35,10 +36,10 @@ public:
     Scheme getScheme();
     set<Tuple> getSet();
     
-    Relation select(string constant, int index, Relation newRelation);
-    Relation select(int index1, int index2, Relation newRelation);
-    Relation project(vector<int> positions, Relation newRelation);
-    Relation rename(map<string, int> variables, Relation newRelation);
+    Relation select(string constant, int index, Relation relation);
+    Relation select(int index1, int index2, Relation relation);
+    Relation project(vector<int> positions, Relation relation);
+    Relation rename(map<string, int> variables, Relation relation);
 private:
     string name; // Name of Scheme
     Scheme scheme; // Scheme is one vector of attributes

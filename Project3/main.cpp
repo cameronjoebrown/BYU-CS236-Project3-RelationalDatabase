@@ -10,6 +10,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "Token.h"
 #include "Scanner.h"
 #include "Parser.h"
 #include "Interpreter.h"
