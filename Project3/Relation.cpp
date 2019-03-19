@@ -38,9 +38,9 @@ string Relation :: toString() {
                 
             }
             else {
-                for(int i = 0; i < x.size(); ++i) {
+                for(int i = 0; i < (int)x.size(); ++i) {
                     ss << "  " << scheme.at(i) << "=" << x.at(i);
-                    if(i == x.size()-1) {
+                    if(i == (int)x.size()-1) {
                         ss << endl;
                     }
                     else {
@@ -95,7 +95,7 @@ Relation Relation :: project(vector<int> positions, Relation relation) {
     Relation newRelation(relation.getName(), relation.getScheme());
     for(Tuple x : relation.getSet()) {
         Tuple temp;
-        for(int j = 0; j < positions.size(); j++){
+        for(int j = 0; j < (int)positions.size(); j++){
             temp.push_back(x.at(positions.at(j)));
         }
         newRelation.addTuple(temp);
