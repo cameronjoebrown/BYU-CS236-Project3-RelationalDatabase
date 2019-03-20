@@ -22,6 +22,10 @@ Relation :: Relation(string n, set<Tuple> s) {
     tupleSet = s;
 }
 
+Relation :: Relation(string n) {
+    name = n;
+}
+
 Relation :: ~Relation() {
     
 }
@@ -93,21 +97,22 @@ Relation Relation :: select(int index1, int index2, Relation relation) {
 }
 
 Relation Relation :: project(vector<int> positions, Relation relation) {
-    Relation newRelation(relation.getName(), relation.getScheme());
+    Relation newRelation(relation.getName());
     for(Tuple x : relation.getSet()) {
         Tuple temp;
         for(int j = 0; j < (int)positions.size(); j++){
             temp.push_back(x.at(positions.at(j)));
+            scheme.push_back(relation.scheme.at(j));
         }
         newRelation.addTuple(temp);
     }
     return newRelation;
 }
 
-Relation Relation :: rename(map<string, int> variables, Relation relation) {
+Relation Relation :: rename(vector<string> variables, Relation relation) {
     Relation newRelation(relation.getName(), relation.getSet());
-    for(map<string, int>::iterator it = variables.begin(); it != variables.end(); it++) {
-        newRelation.scheme.push_back(it->first);
+    for(int i = 0; i < (int)variables.size(); i++) {
+        newRelation.scheme.push_back(variables.at(i));
     }
     return newRelation;
 }

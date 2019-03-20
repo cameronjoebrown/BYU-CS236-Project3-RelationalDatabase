@@ -1,5 +1,5 @@
 snap(Id,'Snoopy',A,P)? Yes(1)
-  A='33333', Id='12 Apple St.', P='555-1234'
+  Id='33333', A='12 Apple St.', P='555-1234'
 csg(Course,'33333',Grade)? Yes(2)
   Course='CS101', Grade='A-'
   Course='EE200', Grade='B'

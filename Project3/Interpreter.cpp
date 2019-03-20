@@ -55,6 +55,7 @@ Relation Interpreter :: evalOneQuery(Predicate myQuery) {
     Relation myRelation = database.at(queryName);
     vector<Parameter> queryParams = myQuery.getParameters();
     vector<int> positions;
+    vector<string> variableNames;
     map<string, int> variables;
     for(int i = 0; i < (int)queryParams.size(); i++) {
         if((queryParams.at(i).getIsConstant()) == true) {
@@ -64,6 +65,7 @@ Relation Interpreter :: evalOneQuery(Predicate myQuery) {
             map<string, int> :: iterator duplicate = variables.find(queryParams.at(i).getValue());
             if(duplicate == variables.end()) {
                 positions.push_back(i);
+                variableNames.push_back(queryParams.at(i).getValue());
                 variables.insert(pair<string, int>(queryParams.at(i).getValue(), i));
             }
             else {
@@ -73,7 +75,7 @@ Relation Interpreter :: evalOneQuery(Predicate myQuery) {
         
     }
     myRelation = myRelation.project(positions, myRelation);
-    myRelation = myRelation.rename(variables, myRelation);
+    myRelation = myRelation.rename(variableNames, myRelation);
     
     variables.clear();
     return myRelation;
